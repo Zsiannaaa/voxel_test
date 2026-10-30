@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Argon Voxel — Open-World WebGL2 Voxel Engine</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+
+  <!-- Minimal Crosshair -->
+  <div id="crosshair" aria-hidden="true"></div>
+
+  <!-- Top-left compact status pill & settings button -->
+  <div id="top-bar">
+    <div id="status-badge">WALK</div>
+    <div id="time-badge">Day 12:00</div>
+    <button id="btn-settings" type="button" title="Settings (Esc / O)">⚙ Settings</button>
+  </div>
+
+  <!-- Click-to-play prompt banner (non-blocking for rendering) -->
+  <div id="pointer-prompt">Click world to lock mouse • WASD Move • Space Jump • F Fly • F3 Debug • Esc Settings</div>
+
+  <!-- F3 Debug Telemetry Overlay -->
+  <pre id="f3-overlay" class="hidden"></pre>
+
+  <!-- Bottom 9-slot Hotbar + Selected Block Label -->
+  <div id="hotbar-wrap">
+    <div id="selected-block-label">Grass Block</div>
+    <div id="hotbar"></div>
+  </div>
+
+  <!-- Settings Modal Panel -->
+  <div id="settings-panel" class="hidden" role="dialog" aria-label="Game Settings">
+    <div class="settings-card">
+      <div class="settings-header">
+        <h2>Engine Settings</h2>
+        <button id="btn-close-settings" type="button">✕</button>
+      </div>
+
+      <label class="setting-row">
+        <span>Render Distance: <strong id="val-rd">16</strong> chunks</span>
+        <input id="inp-rd" type="range" min="4" max="36" step="2" value="16" />
+      </label>
+
+      <label class="setting-row">
+        <span>Field of View: <strong id="val-fov">75°</strong></span>
+        <input id="inp-fov" type="range" min="60" max="110" step="1" value="75" />
+      </label>
+
+      <label class="setting-row">
+        <span>Resolution Scale: <strong id="val-res">100%</strong></span>
+        <input id="inp-res" type="range" min="0.50" max="1.00" step="0.05" value="1.00" />
+      </label>
+
+      <label class="setting-row">
+        <span>Time of Day: <strong id="val-tod">Noon</strong></span>
+        <input id="inp-tod" type="range" min="0" max="1" step="0.005" value="0.24" />
+      </label>
+
+      <div class="setting-toggles">
+        <label><input id="chk-adaptive" type="checkbox" checked /> Adaptive Resolution (60+ FPS guard)</label>
+        <label><input id="chk-fog" type="checkbox" checked /> Distance Atmospheric Fog</label>
+        <label><input id="chk-ao" type="checkbox" checked /> Smooth Vertex Ambient Occlusion</label>
+        <label><input id="chk-cycle" type="checkbox" checked /> Auto Day / Night Cycle</label>
+      </div>
+
+      <div class="settings-actions">
+        <button id="btn-reset-edits" type="button" class="secondary">Clear Saved Edits</button>
+        <button id="btn-resume" type="button" class="primary">Resume Game</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Cached raw API outputs (billed Gemini image generations, never commit)
+tools/.cache/
+
+# Secrets / local environment
+.env
+.env.*
+*.key
+*.pem
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Node (zero-dependency project, but guard anyway)
+node_modules/
+npm-debug.log*

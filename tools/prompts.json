@@ -1,0 +1,194 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "tile_size": 32,
+  "padding": 16,
+  "atlas_grid": 8,
+  "style_preamble": "Flat orthographic perfectly planar game texture filling 100% of the entire square frame edge-to-edge. Stylized 32x32 crisp pixel-art voxel texture, cohesive natural earthy palette, clean pixel clusters, uniform ambient albedo lighting. Strictly NO border, NO frame, NO vignette, NO 3D perspective, NO cube render, NO drop shadows, NO directional lighting gradient, NO text, NO watermark, NO isolated objects.",
+  "seamless_suffix": "Must be a SEAMLESS TILEABLE repeating surface pattern where left/right and top/bottom edges match continuously.",
+  "retry_modifiers": [
+    "CRITICAL: Fill the entire image edge to edge with uniform micro-scale repeating surface detail only. Remove all borders, frames, margins, gradients, and text.",
+    "STRICT ORTHOGRAPHIC ALBEDO TEXTURE ONLY: zoomed-in flat 2D repeating material pattern, zero macro shapes, zero vignette, completely even brightness across corners and center.",
+    "PURE 2D PIXEL ART SURFACE TILE: tight repeating pixel clusters across 100% of the canvas, no edges, no labels, balanced mid-tone contrast."
+  ],
+  "tiles": {
+    "grass_top": {
+      "index": 0,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.46, 0.62],
+      "target_saturation": [0.44, 0.62],
+      "prompt": "Perfectly top-down view of lush meadow grass blades and tiny clover tufts in rich forest and emerald greens, subtle blade variation."
+    },
+    "grass_side": {
+      "index": 1,
+      "wrap_mode": "x",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.40, 0.56],
+      "target_saturation": [0.34, 0.52],
+      "prompt": "Flat side-elevation voxel block texture: top 25% has overhanging lush green turf roots dripping irregularly over the bottom 75% warm loamy brown dirt soil with tiny pebbles. Horizontally seamless left-to-right."
+    },
+    "dirt": {
+      "index": 2,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.36, 0.50],
+      "target_saturation": [0.35, 0.50],
+      "prompt": "Perfectly top-down rich loamy brown soil dirt texture with subtle clods, dark earth crumbs, and tiny muted mineral flecks."
+    },
+    "stone": {
+      "index": 3,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.46, 0.58],
+      "target_saturation": [0.03, 0.10],
+      "prompt": "Perfectly flat natural gray granite rock surface with subtle horizontal strata fractures and cool-warm slate mineral mottling."
+    },
+    "cobblestone": {
+      "index": 4,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.42, 0.55],
+      "target_saturation": [0.04, 0.12],
+      "prompt": "Perfectly flat interlocking fitted rough-hewn gray river cobblestones separated by crisp recessed dark mortar crevices."
+    },
+    "sand": {
+      "index": 5,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.76, 0.88],
+      "target_saturation": [0.24, 0.38],
+      "prompt": "Perfectly top-down warm golden desert sand with gentle wind-rippled grain undulations and fine amber silica sparkles."
+    },
+    "snow": {
+      "index": 6,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.88, 0.96],
+      "target_saturation": [0.04, 0.12],
+      "prompt": "Perfectly top-down fresh alpine snowpack in crisp powder white with very delicate pale ice-blue frost dimples."
+    },
+    "gravel": {
+      "index": 7,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.44, 0.56],
+      "target_saturation": [0.06, 0.16],
+      "prompt": "Perfectly top-down riverbed gravel packed with small angular flint, taupe, charcoal, and slate pebbles."
+    },
+    "log_top": {
+      "index": 8,
+      "wrap_mode": "radial",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.52, 0.66],
+      "target_saturation": [0.34, 0.48],
+      "prompt": "Perfectly top-down cross-section of a sawn oak tree trunk showing warm golden-tan concentric growth rings surrounded by a thin dark brown bark outer rim along the square edges."
+    },
+    "log_side": {
+      "index": 9,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.30, 0.44],
+      "target_saturation": [0.36, 0.52],
+      "prompt": "Flat orthographic rough oak tree bark texture with rugged vertical dark umber ridges and warm walnut crevices."
+    },
+    "planks": {
+      "index": 10,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.56, 0.68],
+      "target_saturation": [0.40, 0.54],
+      "prompt": "Flat horizontal sawn oak wood planks, four equal horizontal boards stacked vertically with crisp dark seam lines, staggered vertical butt joints, and warm honey wood grain."
+    },
+    "leaves": {
+      "index": 11,
+      "wrap_mode": "xy",
+      "alpha_mode": "cutout",
+      "target_brightness": [0.36, 0.52],
+      "target_saturation": [0.48, 0.66],
+      "prompt": "Dense layered oak tree foliage leaf clusters in deep forest and vibrant moss green with small pitch-black gaps between leaf clusters for cutout alpha."
+    },
+    "water": {
+      "index": 12,
+      "wrap_mode": "xy",
+      "alpha_mode": "translucent",
+      "alpha_value": 186,
+      "target_brightness": [0.48, 0.66],
+      "target_saturation": [0.58, 0.76],
+      "prompt": "Perfectly top-down clear azure ocean water surface with soft cyan caustic ripple networks over deep cerulean blue."
+    },
+    "ice": {
+      "index": 13,
+      "wrap_mode": "xy",
+      "alpha_mode": "translucent",
+      "alpha_value": 216,
+      "target_brightness": [0.74, 0.88],
+      "target_saturation": [0.26, 0.42],
+      "prompt": "Perfectly flat glacial blue ice surface with subtle crystalline frost hairline fractures and pale cyan sheen."
+    },
+    "coal_ore": {
+      "index": 14,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.38, 0.52],
+      "target_saturation": [0.03, 0.10],
+      "prompt": "Natural gray granite stone matrix embedded with chunky glossy anthracite black coal mineral seams and flecks."
+    },
+    "iron_ore": {
+      "index": 15,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.46, 0.58],
+      "target_saturation": [0.12, 0.26],
+      "prompt": "Natural gray granite stone matrix embedded with warm rust-tan and peachy ochre raw iron ore mineral nodules."
+    },
+    "gold_ore": {
+      "index": 16,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.48, 0.62],
+      "target_saturation": [0.20, 0.38],
+      "prompt": "Natural gray granite stone matrix embedded with gleaming metallic yellow-gold nuggets and bright amber highlights."
+    },
+    "bedrock": {
+      "index": 17,
+      "wrap_mode": "xy",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.20, 0.32],
+      "target_saturation": [0.02, 0.08],
+      "prompt": "Ultra-dense gnarled charcoal-black and dark basalt bedrock with jagged high-contrast obsidian striations."
+    },
+    "glass": {
+      "index": 18,
+      "wrap_mode": "frame",
+      "alpha_mode": "glass",
+      "target_brightness": [0.78, 0.94],
+      "target_saturation": [0.08, 0.22],
+      "prompt": "Square voxel window pane with a crisp 2-pixel pale silver-cyan outer frame border, clear dark-keyed interior, and two small diagonal white pixel glint streaks."
+    },
+    "clouds": {
+      "index": 19,
+      "wrap_mode": "xy",
+      "alpha_mode": "translucent",
+      "alpha_value": 224,
+      "target_brightness": [0.90, 0.98],
+      "target_saturation": [0.02, 0.08],
+      "prompt": "Soft puffy white pixel-art cloud texture with gentle silver-ivory cellular puff variation."
+    },
+    "snow_grass_side": {
+      "index": 20,
+      "wrap_mode": "x",
+      "alpha_mode": "opaque",
+      "target_brightness": [0.48, 0.64],
+      "target_saturation": [0.20, 0.36],
+      "prompt": "Flat side-elevation voxel block texture: top 30% crisp white snow cap dripping unevenly over the bottom 70% rich brown loamy dirt. Horizontally seamless left-to-right."
+    },
+    "tall_grass": {
+      "index": 21,
+      "wrap_mode": "none",
+      "alpha_mode": "cutout",
+      "target_brightness": [0.44, 0.62],
+      "target_saturation": [0.46, 0.66],
+      "prompt": "Flat pixel-art tuft of wild meadow grass blades growing upward from the bottom edge against a solid pitch-black background for cutout alpha, upper corners open."
+    }
+  }
+}
